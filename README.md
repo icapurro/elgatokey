@@ -13,7 +13,7 @@ essentially monitors the stream log on Mac OS and filters out any sensor indicat
 * A `[cam]` string is present in the log line, the lights should be **ON**
 * A `[cam]` is not  present in the log line, the lighs should be **OFF**
 
-## Turning the Engato Key Light Air On and Off
+## Turning the Elgato Key Light Air On and Off
 
 `curl --location --request PUT 'http://<light IP address>:9123/elgato/lights' --header 'Content-Type: application/json' --data-raw '{"lights":[{"brightness":40,"temperature":162,"on":1}],"numberOfLights":1}'` 
   
@@ -23,9 +23,9 @@ You need to change the local IP addresses of the lights based on your local setu
 
 ## Running the script and testing if everything works
 
-You can run the script using Terminal, download the .sh file, edit it and run:
+You can run the script using Terminal, download the .py file, edit it and run:
 
-`python autolights.py`
+`python3 autolights.py`
 
 and this will start to monitor your stream log.  Open any app that uses your web camera, maybe **Photo Booth** and see if your light(s) come on.  If they do not, check that you have entered the correct IP address for your light(s).  Easiest way to identify the IP address is to use the **Elgato Control Center** utility > **Key light settings** > and note the IP address for each light.
 
